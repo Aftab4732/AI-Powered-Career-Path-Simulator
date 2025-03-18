@@ -1,0 +1,330 @@
+/* src/styles/auth.css */
+/* 
+.auth-background {
+    background-image: 
+      radial-gradient(circle at 0% 0%, rgba(104, 128, 255, 0.1) 0%, transparent 50%),
+      radial-gradient(circle at 100% 100%, rgba(120, 119, 198, 0.15) 0%, transparent 50%);
+    background-color: #f8fafc;
+    min-height: 100vh;
+    padding: 2rem;
+  }
+  
+  .auth-container {
+    max-width: 450px;
+    margin: 2rem auto;
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    box-shadow: 
+      0 10px 25px -5px rgba(0, 0, 0, 0.1),
+      0 8px 10px -6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+  }
+  
+  .auth-container:hover {
+    transform: translateY(-5px);
+  }
+  
+  .auth-header {
+    padding: 2.5rem 2rem;
+    background: linear-gradient(135deg,#469de5, #6366f1);
+    color: white;
+    text-align: center;
+  }
+  
+  .auth-form {
+    padding: 2rem;
+  }
+  
+  .auth-input-group {
+    position: relative;
+    margin-bottom: 1.5rem;
+  }
+  
+  .auth-input {
+    width: 83%;
+    padding: 0.75rem 1rem 0.75rem 3rem;
+    border: 2px solid #e2e8f0;
+    border-radius: 10px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+  }
+  
+  .auth-input:focus {
+    border-color: #4f46e5;
+    box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.1);
+    outline: none;
+  }
+  
+  .auth-icon {
+    position: absolute;
+    left: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #94a3b8;
+  }
+  
+  .auth-button {
+    width: 100%;
+    padding: 0.75rem;
+    background: linear-gradient(135deg, #469de5, #6366f1);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .auth-button:hover {
+    background: linear-gradient(135deg, #469de5, #4f46e5);
+    transform: translateY(-2px);
+  }
+  
+  .auth-button:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+    transform: none;
+  }
+  
+  .auth-message {
+    margin: 1rem 0;
+    padding: 1rem;
+    border-radius: 10px;
+    text-align: center;
+  }
+  
+  .auth-message.success {
+    background-color: #dcfce7;
+    color: #166534;
+  }
+  
+  .auth-message.error {
+    background-color: #fee2e2;
+    color: #991b1b;
+  }
+  
+  .auth-alternate {
+    text-align: center;
+    margin-top: 1.5rem;
+    color: #64748b;
+  }
+  
+  .auth-alternate a {
+    color: #4f46e5;
+    text-decoration: none;
+    font-weight: 600;
+  }
+  
+  .auth-alternate a:hover {
+    text-decoration: underline;
+  }
+  
+  .loading-spinner {
+    width: 1.5rem;
+    height: 1.5rem;
+    border: 2px solid white;
+    border-top-color: transparent;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+  }
+  
+  @keyframes spin {
+    to {
+      transform: rotate(360deg);
+    }
+  } */
+
+
+
+/* src/styles/auth.css */
+.career-auth-background {
+  background-image: 
+    radial-gradient(circle at 0% 0%, rgba(104, 128, 255, 0.2) 0%, transparent 50%),
+    radial-gradient(circle at 100% 100%, rgba(120, 119, 198, 0.25) 0%, transparent 50%);
+  background-color: #f0f4f8;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.career-auth-container {
+  width: 100%;
+  max-width: 450px;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  border-radius: 16px;
+  box-shadow: 
+    0 10px 25px -5px rgba(0, 0, 0, 0.1),
+    0 8px 10px -6px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.career-auth-container:hover {
+  transform: translateY(-5px);
+  box-shadow: 
+    0 15px 30px -5px rgba(0, 0, 0, 0.1),
+    0 10px 15px -6px rgba(0, 0, 0, 0.05);
+}
+
+.career-auth-header {
+  padding: 2.5rem 2rem 2rem;
+  background: linear-gradient(135deg, #6366F1, #8B5CF6);
+  color: white;
+  text-align: center;
+}
+
+.career-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+}
+
+.career-logo h1 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-left: 0.75rem;
+}
+
+.career-auth-header h2 {
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.career-auth-header p {
+  font-size: 1rem;
+  opacity: 0.9;
+}
+
+.career-auth-form {
+  padding: 2rem;
+}
+
+.career-auth-input-group {
+  position: relative;
+  margin-bottom: 1.5rem;
+}
+
+.career-auth-input {
+  width: 100%;
+  padding: 0.75rem 1rem 0.75rem 3rem;
+  border: 2px solid #e2e8f0;
+  border-radius: 10px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  box-sizing: border-box;
+}
+
+.career-auth-input:focus {
+  border-color: #6366F1;
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
+  outline: none;
+}
+
+.career-auth-icon {
+  position: absolute;
+  left: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #94a3b8;
+}
+
+.career-auth-button {
+  width: 100%;
+  padding: 0.875rem;
+  background: linear-gradient(135deg, #6366F1, #8B5CF6);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.career-auth-button:hover {
+  background: linear-gradient(135deg, #4F46E5, #7C3AED);
+  transform: translateY(-2px);
+}
+
+.career-auth-button:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.career-auth-message {
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+  border-radius: 10px;
+  text-align: center;
+  font-weight: 500;
+}
+
+.career-auth-message.success {
+  background-color: #dcfce7;
+  color: #166534;
+}
+
+.career-auth-message.error {
+  background-color: #fee2e2;
+  color: #991b1b;
+}
+
+.career-auth-alternate {
+  text-align: center;
+  margin-top: 1.5rem;
+  color: #64748b;
+  font-size: 0.95rem;
+}
+
+.career-auth-alternate a {
+  color: #6366F1;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.2s ease;
+}
+
+.career-auth-alternate a:hover {
+  color: #4F46E5;
+  text-decoration: underline;
+}
+
+.career-loading-spinner {
+  width: 1.5rem;
+  height: 1.5rem;
+  border: 2px solid rgba(255, 255, 255, 0.7);
+  border-top-color: transparent;
+  border-radius: 50%;
+  animation: career-spin 1s linear infinite;
+}
+
+@keyframes career-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+@media (max-width: 640px) {
+  .career-auth-container {
+    max-width: 100%;
+  }
+  
+  .career-auth-header {
+    padding: 2rem 1.5rem;
+  }
+  
+  .career-auth-form {
+    padding: 1.5rem;
+  }
+}

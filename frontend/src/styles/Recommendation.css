@@ -1,0 +1,292 @@
+/* Enhanced Recommendation.css with fixes */
+.recommendations-container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 100%;
+    background-color: #f8fafc;
+    overflow: hidden;
+  }
+  
+  .recommendations-content {
+    display: flex;
+    height: 100%;
+    width: 100%;
+  }
+  
+  /* Left Panel - Input Form */
+  .recommendations-left-panel {
+    width: 30%;
+    min-width: 320px;
+    background: linear-gradient(135deg, #4f46e5, #3b82f6);
+    color: white;
+    padding: 2rem 2.5rem; /* Increased horizontal padding */
+    /* margin-left: 2.5rem; Added left margin */
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    overflow-y: auto;
+  }
+  
+  .recommendations-header {
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+  
+  .recommendations-title {
+    font-size: 2rem;
+    font-weight: 700;
+    background: linear-gradient(to right, #ffffff, #e2e8f0);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 0.5rem;
+  }
+  
+  .recommendations-subtitle {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 1rem;
+  }
+  
+  .recommendations-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .form-group label {
+    font-weight: 600;
+    font-size: 1rem;
+  }
+  
+  .recommendations-input {
+    background-color: rgba(255, 255, 255, 0.2); /* Slightly lighter background */
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 8px;
+    padding: 0.75rem 1rem;
+    transition: all 0.3s ease;
+  }
+  
+  /* Fix for text visibility in input fields */
+  .recommendations-input input {
+    /* color: white; Ensure text is white */
+    font-weight: 500; /* Make text a bit bolder */
+    caret-color: rgb(255, 0, 0); /* White cursor */
+  }
+  
+  .recommendations-input input::placeholder {
+    color: rgba(255, 255, 255, 0.6); /* Slightly brighter placeholder text */
+  }
+  
+  .recommendations-input:focus-within {
+    background-color: rgba(255, 255, 255, 0.25);
+    border-color: rgba(255, 255, 255, 0.5);
+    box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.2);
+  }
+  
+  .recommendations-button {
+    background: white;
+    color: #3b82f6;
+    font-weight: 600;
+    padding: 0.75rem;
+    border-radius: 8px;
+    margin-top: 1rem;
+    transition: all 0.3s ease;
+    border: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .recommendations-button:hover {
+    background: #f1f5f9;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+  }
+  
+  .recommendations-error {
+    background-color: rgba(239, 68, 68, 0.2);
+    border: 1px solid rgba(239, 68, 68, 0.5);
+    color: white;
+    padding: 0.75rem;
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+    font-weight: 500;
+  }
+  
+  /* Right Panel - Recommendations Display */
+  .recommendations-right-panel {
+    flex: 1;
+    padding: 2rem;
+    overflow-y: auto;
+    background-color: #f8fafc;
+  }
+  
+  .recommendations-results-header {
+    margin-bottom: 1.5rem;
+    text-align: center;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #e2e8f0;
+  }
+  
+  .recommendations-loading {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    height: 60vh;
+    color: #64748b;
+  }
+  
+  .recommendations-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+    gap: 1.5rem;
+    padding: 0.5rem;
+  }
+  
+  .recommendation-card {
+    background-color: white;
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+    border: 1px solid #e2e8f0;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    cursor: pointer;
+  }
+  
+  .recommendation-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.1);
+    border-color: #cbd5e1;
+  }
+  
+  .recommendation-card-selected {
+    border: 2px solid #10b981;
+    box-shadow: 0 8px 16px rgba(16, 185, 129, 0.2);
+  }
+  
+  .recommendation-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+  }
+  
+  .selected-badge {
+    font-size: 0.75rem;
+  }
+  
+  .recommendation-description {
+    color: #475569;
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+  }
+  
+  .recommendation-details {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    margin-bottom: 1.5rem;
+    flex: 1;
+  }
+  
+  .recommendation-detail-item {
+    border-left: 3px solid #3b82f6;
+    padding-left: 0.75rem;
+  }
+  
+  .recommendation-skill-gap {
+    margin-top: 0.5rem;
+  }
+  
+  .skill-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+  }
+  
+  .skill-badge {
+    font-size: 0.75rem;
+  }
+  
+  .recommendation-footer {
+    margin-top: auto;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .view-courses-btn {
+    width: 100%;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+  }
+  
+  .view-courses-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .no-recommendations {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60vh;
+    padding: 2rem;
+    background-color: white;
+    border-radius: 12px;
+    border: 1px dashed #cbd5e1;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 992px) {
+    .recommendations-content {
+      flex-direction: column;
+    }
+    
+    .recommendations-left-panel {
+      width: 100%;
+      min-width: 100%;
+      max-height: 40vh;
+      margin-left: 0; /* Remove margin on mobile */
+    }
+    
+    .recommendations-cards {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  /* Animations */
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  .recommendations-right-panel {
+    animation: fadeIn 0.5s ease-out;
+  }
+  
+  .recommendation-card {
+    animation: fadeIn 0.5s ease-out;
+    animation-fill-mode: both;
+  }
+  
+  .recommendation-card:nth-child(2) {
+    animation-delay: 0.1s;
+  }
+  
+  .recommendation-card:nth-child(3) {
+    animation-delay: 0.2s;
+  }
+  
+  .recommendation-card:nth-child(4) {
+    animation-delay: 0.3s;
+  }

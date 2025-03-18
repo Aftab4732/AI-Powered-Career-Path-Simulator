@@ -1,0 +1,97 @@
+/* profileform.css */
+.profile-form-container {
+  min-height: 100vh;
+  background-color: #f8f9fa;
+  padding: 2rem;
+  margin-left: calc(5rem + 20px);
+  position: relative; /* Added to establish stacking context */
+}
+.skills-section {
+  background-color: white;
+  padding: 1rem;
+  border-radius: 8px;
+  border: 1px solid #e9ecef;
+}
+
+/* Animation for success message */
+.progress-message {
+  transition: all 0.3s ease;
+}
+
+.progress-message.success {
+  background-color: #ebfbee;
+  color: #0f766e;
+  border: 1px solid #d1fae5;
+}
+
+.progress-message.error {
+  background-color: #fef2f2;
+  color: #dc2626;
+  border: 1px solid #fee2e2;
+}
+
+.progress-message.info {
+  background-color: #eff6ff;
+  color: #2563eb;
+  border: 1px solid #dbeafe;
+}
+
+/* Hover effects for interactive elements */
+.mantine-Button-root:hover {
+  transform: translateY(-1px);
+  transition: transform 0.2s ease;
+}
+
+.mantine-TextInput-input:focus,
+.mantine-Select-input:focus {
+  box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.1);
+}
+
+.mantine-Avatar-root {
+  border: 4px solid white;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+.career-section {
+  position: relative; /* Added for proper stacking context */
+}
+
+/* Remove any position: fixed or absolute from dropdown-related styles */
+.mantine-Select-dropdown {
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+/* Ensure proper stacking context */
+.mantine-Paper-root {
+  position: relative;
+  z-index: 1;
+}
+
+.career-select .mantine-Select-input {
+  transition: all 0.2s ease;
+}
+
+.career-select .mantine-Select-input:hover {
+  border-color: #cbd5e1;
+}
+
+.career-select .mantine-Select-input:focus {
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.career-select .mantine-Select-dropdown {
+  border-radius: 8px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  border: 2px solid #e2e8f0;
+}
+
+.career-select .mantine-Select-item {
+  padding: 10px 12px;
+  border-radius: 4px;
+  transition: background-color 0.2s ease;
+}
+
+.career-select .mantine-Select-item:hover {
+  background-color: #f1f5f9;
+}

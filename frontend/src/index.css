@@ -1,0 +1,44 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+/* body{
+    margin-left: 5rem;
+} */
+/* Add these styles to handle theme transitions */
+/* Light Theme */
+
+/* Light Theme */
+body.light {
+  --bg-color: #f5f7fa;
+  --text-color: #1a1a1a;
+  --card-bg: #ffffff;
+  --card-border: #ddd;
+  --primary-color: #6b5b95;
+  --button-bg: #007bff;
+  --hover-bg: #f0f0f0;
+}
+
+/* Dark Theme */
+body.dark {
+  --bg-color: #121212;
+  --text-color: #e0e0e0;
+  --card-bg: #1e1e1e;
+  --card-border: #333;
+  --primary-color: #a29bfe;
+  --button-bg: #4dabf7;
+  --hover-bg: #1a1a1a;
+}
+
+/* Global Styles */
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: 'Inter', sans-serif;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+* {
+  transition: background-color 0.3s, color 0.3s;
+}
